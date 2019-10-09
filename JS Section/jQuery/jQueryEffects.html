@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery effects demo</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"> </script>
+
+  <style type="text/css">
+	  	
+  	div{
+  		width: 100px;
+  		height: 100px;
+  		background: teal;
+  		float: left;
+  		margin: 20px;
+  	}
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<button>Click Me</button>
+
+
+<div>please dont fade me</div>
+<div>im begging you please</div>
+<div>really please dont fade me</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+
+
+
+
+//	$("div").fadeOut(1000, function(){
+//			console.log("Fade Completed")
+//			$(this).remove(); //waits until the elements are completely faded to run
+
+//			});
+
+//   });
+
+//$("button").on("click", function(){
+//	$("div").fadeToggle(500);
+//});
+
+$("button").on("click", function(){
+	$("div").slideToggle(1000, function(){
+		//$(this).remove();
+		console.log("slide is Completed")
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
