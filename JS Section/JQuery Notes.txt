@@ -4,6 +4,107 @@
 
  for selecting elements   $('h1')[0];
 
- But, everything else Colt demonstrates will remain the same, e.g., $('h1').css('property', 'value')
+ But, everything else Colt demonstrates will remain the same, e.g., $('h1').css('property', 'value') 
+
+ can also specify
+$("ul li a").css("background", "pink")
+
+can pass an object in to the propert section 
 
 
+var styles = { color: "red",  
+				background: "pink",
+				border: "2px solid purple"
+	
+}
+$("h1").css(styles)
+
+$("li").css("color","blue")
+
+$("li").css({fontSize: "10px", border: "3px dashed purple", background: "rgba(89, 45, 20, 0.5"});
+
+
+
+***************************************************
+important jquery methods
+***************************************************
+val()
+
+$("input").val()   gives us the current value of input
+
+can also change current val
+$("input").val("new input")
+
+
+
+
+$("element").text()   
+
+returns the strings of text from the html
+can also update text
+$("h1").text("changing the text to this"); 
+
+.text cant change the html
+
+
+
+
+attr()
+retrieves the value of an attribute or set the attribute
+$("input").attr("type", "color");
+
+
+
+
+html()
+retrieves the inner html of specified element
+$("h1").html();
+.html can change html code
+$("h1").html("<li> I hacked your H!</li>")
+
+
+addClass()
+adds class to  specified attribute
+$("h1").addClass("correct")
+
+
+removeClass()
+
+
+toggleClass("done")
+toggles the attribute selected
+
+
+
+
+************************************
+jQuery events
+************************************
+
+
+click()
+quick and easy way to add clicklistner to element(s)
+$("#submit").click(funtion(){
+	console.log("another click")
+})
+
+$("button").click(function(){
+	alert("someone clicked a button");
+})
+
+$("button").click(fucntion(){
+	$(this).css("background", "pink")  
+
+	//needs to use a jQuery object to use a jQuery method like .css()
+});
+
+$("button").click(fucntion(){
+	var text = $(this).text();
+	console.log("you clicked "= text)
+});
+
+
+keypress()
+
+
+on()
