@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Demo</title>
+</head>
+<body>
+<h1>Login</h1>	
+
+<!--Action - where form sends data to-->
+<!--method - what http method get/post-->
+<!-- Form tag is a block level element -->
+
+<!-- <form> 
+	<input name="Username" type="text" placeholder="Username">
+	<input name="Password" type="password" placeholder="Password">
+	<input type="Submit">
+</form>
+
+<form> 
+	<label>
+		Username:
+	<input name="Username" type="text" placeholder="Username">
+	</label>
+	<label>
+		Password:
+	<input name="Password" type="password" placeholder="Password">
+	</label>
+	<input type="Submit">
+</form> -->
+<!-- required is a boolean attribute and will be true as soon as page loads, also known as a presence validation, makes sure data is there -->
+
+<!-- data type validation checks for specific data -->
+<form> 
+	<label for="username">Username:</label>
+	 <input id="username" name="Username" type="Email" placeholder="Email" required>  
+	
+	<label for="password">Password:</label>
+	<input id="password" name="Password" type="password" placeholder="Password" required>
+	<input type="Submit">
+</form>
+
+</body>
+</html>

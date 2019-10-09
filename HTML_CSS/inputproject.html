@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms and input project</title>
+</head>
+<body>
+<h1>Register for Poop of the Week: </h1>
+
+<form>
+	<label for="fName">First Name:</label>
+	<input id="fName" type="text" name="fName" placeholder="First Name" required>
+
+	<label for="lName">Last Name:</label>
+	<input id="lName" type="text" name="lName" required>
+
+<p>Gender</p>
+
+	<label for="Male">Male</label>
+	<input  id="Male" type="radio" name="Gender" value="Male">
+
+	<label for="Female">Female</label>
+	<input id="Female" type="radio" name="Gender" value="Female">
+
+	<label for="Other"> Other/Prefer not to say</label>
+	<input id="Other" type="radio" name="Gender" value="Other">
+<p>contact information</p>
+
+	<label for="Email">Email Address:</label>
+	<input id="Email" type="Email" name="Email" placeholder="user@email.com" required>
+
+	<label for="Password">Password</label>
+	<input id="Password" type="Password" name="Password" placeholder="Password" minlength="5" maxlength="10" required>
+
+<p>Birthdate</p>
+	<select name="Month">
+		<option>Jan</option>
+		<option>Feb</option>
+		<option>March</option>
+		<option>April</option>
+		<option>May</option>
+		<option>Jun</option>
+		<option>Jul</option>
+	</select>
+
+	<select name="Day">
+		<option>01</option>
+		<option>02</option>
+		<option>03</option>
+		<option>04</option>
+		<option>05</option>
+	</select>
+
+	<select name="Year">
+		<option>1969</option>
+		<option>1996</option>
+		<option>1691</option>
+		<option>0169</option>
+		<option>2069</option>		
+	</select>
+
+
+
+
+
+
+	<label id="agree">I agree to the terms of service: </label>
+	<input id="agree" type="checkbox" name="agree" required>
+
+<button>Submit</button>
+
+</form>
+
+
+</body>
+</html>

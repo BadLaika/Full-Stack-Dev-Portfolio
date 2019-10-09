@@ -1,0 +1,55 @@
+p{
+	font-family: Arial; /* if font starts with number needs quotation makrs*/
+}
+
+body{
+	font-size: 10px
+}
+
+h1{
+	font-family: Georgia;
+}
+
+h1{
+	font-size: 16px; /*can use px*/
+}
+
+p{
+	font-size: 2.0em;
+}
+
+span{
+	font-size: 2.0em; /* doubles current value*/
+}
+
+p{
+	font-weight: normal; /* some fonts allow numerical scale by 100 from 100-800, higher is bolder */
+}
+
+p{
+	line-height: 2; /*multiplies current line height by number given*/
+}
+
+h1{
+	text-align: right;
+}
+p{
+	text-align: center;
+}
+
+p{
+	text-decoration: underline;
+}
+
+h1{
+	text-decoration: line-through;
+}
+span{
+	text-decoration: overline;
+}
+h1{
+	font-size: 4.0em;
+}
+h1{
+	font-family: Staatliches;
+}

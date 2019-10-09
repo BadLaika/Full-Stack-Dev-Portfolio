@@ -1,0 +1,26 @@
+p{
+
+/*Content- Width and Height*/
+width: 200px;  /*can also use percentages, uses percent of element 
+using percentages can cause images to change their width*/
+
+/*Border*/
+
+border: 2px solid blue;
+
+/*Padding*/
+
+/*padding: 10px;*/
+padding-left: 40px;
+
+/*Margin space between elements*/
+/*margin: 100px;*/
+/*margin-top: 500px;*/
+
+/*margin:top right bottom left;*/
+/*margin: 500px 20px 100px 40px;
+*/
+margin: 0px auto 0px auto;
+
+/*margin: 0px auto; stes top an dbottom to 0 and l/r to auto*/
+}
