@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this is a test page for dom manipulation</title>
+	<style type="text/css">
+		.purple{
+			background: purple;
+		}
+	</style>
+
+</head>
+<body>	
+
+
+	<h1>I am an h1!</h1>
+	<h1>goodbye</h1>
+	<button>Click ME</button>
+	<p> 
+		this is an <strong>awesome</strong> paragraph
+	</p>
+	<p id="first" class="special"> paragraph1</p>
+	<p class="special">goodbye</p>
+	<p> hi again</p>
+ 	<p id="last">goodbye again</p>
+
+	<ul>
+		<li class="bolded">list item 1</li>
+		<li id="highlight">list item 2</li>
+		<li class="bolded">list item 3</li>
+	</ul>
+<script type="text/javascript">
+var button = document.querySelector("button");
+	button.addEventListener("click", function(){
+    if(button.style.color == "white"){
+        button.style.color = "purple"}
+	else{
+	button.style.color = "white";
+	}
+	document.body.classList.toggle("purple");
+})
+</script>
+</body>
+</html>
+

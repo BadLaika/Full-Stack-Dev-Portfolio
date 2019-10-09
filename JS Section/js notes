@@ -1,0 +1,214 @@
+js notes
+\ string escape quote
+var yourVarName = yourValue;
+js comment \\
+
+
+array iteration:
+
+var colors - ["red", "orange", "blue", "green"]
+for(var i = 0, i < colors.length, i++){
+	console.log(colors[i]);
+}
+
+arr.forEach(someFunction)
+
+colors.forEach(function(color){      //with a foreach you can use an 
+                                       anonymous functio
+	//color is a place holder
+	console.log(color);
+});
+
+
+function printColor(color){
+	console.log("********");
+	console.log(color)
+	console.log("********");
+}
+
+colors.forEach(printColor);  dont add parentesis for the nested fucntion, js will understand its a func, if youadd parentesis it will execute immediately, not what we want
+
+
+
+
+
+
+using a while loop to go through an array
+
+var count = 0;
+while(count < colors.length) {
+	console.log(colors[count]);
+	count++;
+}
+
+
+
+********************
+
+js object notes
+
+********************
+
+establish it:
+var person = { name: "Cindy", age: 32, city: "missoula"}; 
+
+
+call it 
+console.log(person[ "name"]);
+or
+console.log(person.name);
+
+
+cant use dot notation if it starts with a number
+cant use dot notation if there is a space in the obj being called
+
+can change item either by
+person.age = 4;
+or person.age += 1;
+
+someObject.friends[0].name[0]
+
+
+
+a method is just a function as a property of an object
+var someObject = { name: chuck, age: 12, add: function(x,y)
+	{
+	return x + y;
+	}
+}
+to call:
+someObject.add(10,5)
+
+var catSpace = {};
+catSpace.speak = function(){
+	return "MEOW";
+}
+
+
+############################
+this
+############################
+
+var comments = {};
+
+comments.data = ["good", "bad", "lame"]
+
+function print(arr){
+	arr.forEach(function(el){
+		console.log(el);
+	})
+}
+
+to use in an array instead to print whatever is in data,
+can use
+
+comments.print = function(){
+	this.data.forEach(function(el){
+	console.log(el);
+	})
+}
+
+
+
+**********************************
+DOM Manipulation
+**********************************
+document object model
+the interface between js and html+css
+
+select and manipulate
+
+
+DOM selectors
+
+document.getElementById("highlighted")
+	only returns one
+
+document.getElementsByClassName("bolded")
+	can return multiple
+	can also choose only one specific one:
+	eg: document.getElementsByClassName("special")[0]
+
+document.getElemetnsByTagName("h1")
+	can return multiple
+
+document.querySelector("#highlight")
+	document.querySelector(".bolded")
+	document.querySelector("h1")
+	will always return the first Item
+
+
+document.querySelectorAll(".bolded")
+	will rerturn all of .bolded
+	can still be used even if there is only one match
+	returns as a list
+	can use brackets to select a specific one
+
+
+style property is one way to manipulate an elements sytle
+	SELECT:
+	var tag = document.getElementById("highlight");
+	MANIPULATE:
+	tag.style.color = "blue";
+	tag.style.border = "10px solid red";
+	needs to follow js rules even though it is affecting the css
+
+
+can add classes with nameofTag.classlist.add("someClass")
+can remove with ...remove("someClass")
+can add or remove with ...toggle("someClass")
+
+
+item.textContent   shows the content of the tag
+can also change text content item.textContent = "new content";
+
+tag.innerHTML
+works like textcontent but returns a string of all the html contained in a given element
+
+getAttribute()   and    setAttribute()
+
+anchorWithMyURL.setAttribute("href","http://www.bing.com")
+anchorWithMyURL.textContent
+
+
+
+
+###########################################
+Changing google page notes
+###########################################
+logo.setAttribute("srcset","www.newurl.com")
+logo.style.width = "100px";
+
+
+loop to select all anchor tags on a page
+cant use foreach because its not a real array
+var links = document.getElementsbyTagName("a");
+for(var i = 0; i < links.length; i++){
+	console.log(links[i].textContent);
+}
+for(var i = 0; i < links.length; i++){
+	links[i].style.background = "pink";
+}
+
+
+
+==================================
+dom events
+===================================
+
+eventd are everywhere, clicking, hovering, dragging pressing enter
+
+select an eklement and then attach an event listener to it
+
+element.addEventListener(type, functionToCall);
+
+var button = document.querySelector("button
+button.addEventListener("click", function(){
+	console.log("somoene clicked the button");
+});
+
+
+example for iterating though li's and changing thier color if they were clicked on 
+for(var i = 0; i < lis.length; i++){
+    lis[i].addEventListener("click", function(){
+        this.style.color = "pink"})}

@@ -1,0 +1,9 @@
+ jquery files cna either be local or to a CDN
+
+ $("selectorGoesHere")  operates like querySelectorAll
+
+ for selecting elements   $('h1')[0];
+
+ But, everything else Colt demonstrates will remain the same, e.g., $('h1').css('property', 'value')
+
+

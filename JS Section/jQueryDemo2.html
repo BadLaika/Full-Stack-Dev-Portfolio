@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>second jquery demo</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"> </script>
+</head>
+<body>
+
+	<div> div 1</div>
+
+	<div class="highlight"> div 2</div>
+
+	<div id="third"> div 3</div>
+
+	<div class="highlight"> div 4</div>
+
+<script type="text/javascript">
+	$(".highlight").css("width", "200px")
+	$("div")[0].css("color", "pink")
+	$("#third").css("border", "1px solid orange")
+	$("div:first-of-type").css("color", "pink") //could also use jQuery shortcur div:first
+
+
+
+</script>
+
+
+</body>
+</html>
