@@ -83,6 +83,8 @@ jQuery events
 
 
 click()
+
+only adds listeners for existing elements
 quick and easy way to add clicklistner to element(s)
 $("#submit").click(funtion(){
 	console.log("another click")
@@ -124,6 +126,9 @@ console.log("you pressed a key");
 
 
 on()
+
+CAN ADD LISTENERS FOR FUTURE ELEMENTS
+
 can create a listener for any event
 $("h1").on("click", function(){
 	$(this).css("color", "purple");
@@ -148,6 +153,43 @@ $("li").on("mouseleave", function(){
 	
 })
 
+
+
+***************************************************
+jQuery Effects
+***************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************
+html bubbling effect
+*********************************************************
+causes a click on an example li to move up into the ul, body and html
+
+can use 
+
+event.stopPropogation(); to cancell this effect
+
+
+$("span").click(function(event){
+$(this).parent().remove();
+	event.stopPropagation();
+
+});
 
 
 
